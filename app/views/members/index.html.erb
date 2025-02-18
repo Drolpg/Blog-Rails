@@ -1,0 +1,16 @@
+<h2> Members </h2>
+
+<p> <%= link_to "New Member", new_member_path %> </p>
+
+<% @members.each do |member| %>
+    <p>
+        <%= member.id %> |
+        <%= member.name %> |
+        <%= member.age %> |
+        <%= member.number %> |
+        
+        <%= button_to "Detail", member_path(member), method: :get %>
+        <%= button_to "Edit", edit_member_path(member), method: :get %>
+        <%= button_to "Delete", member_path(member), method: :delete %>
+    </p>
+<% end %>
