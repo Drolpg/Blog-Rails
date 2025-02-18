@@ -1,0 +1,18 @@
+<%= form_with model: member, local: true do |form| %>
+    <p>
+        <%= form.label :name, "Name" %>
+        <%= form.text_field :name %>
+    </p>
+    <p>
+        <%= form.label :age, "Age" %>
+        <%= form.number_field :age %>
+    </p>
+    <p>
+        <%= form.label :number, "Number" %>
+        <%= form.number_field :number %>
+    </p>
+        <%= form.submit %>
+    <p>
+    
+    </p>
+<% end %>

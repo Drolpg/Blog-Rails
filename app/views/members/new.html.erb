@@ -1,0 +1,13 @@
+<h2>New Member</h2>
+<%= link_to "Back", members_path %>
+
+<% if @member.errors.any? %>
+    <% @member.errors.full_messages.each do |msg| %>
+        <p>
+            <%= msg %>
+        </p>
+    <% end %>
+<% end %>
+
+
+<%= render 'form', member: @member %>
